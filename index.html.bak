@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Hydroweb with AI</title>
+</head>
+<body>
+    <h1>Search Hydroweb with AI</h1>
+    <input type="text" id="apiInput"  size="100" placeholder="What hydrology product do you want ?">
+    <button onclick="callApi()">Rechercher params</button>
+    <div id="jsonData"></div>
+
+    <script>
+        async function fetchData(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const jsonData = await response.json();
+
+                let collections = "<b>Collections:</b> " + JSON.stringify(jsonData.collections, null, 2) + "<br>";
+
+                let startDate = "<b>Start Date:</b> " + JSON.stringify(jsonData.endDate, null, 2) + "<br>";
+
+                let endDate = "<b>End Date:</b> " + JSON.stringify(jsonData.startDate, null, 2) + "<br>";
+
+                let boundingBox = "<b>Bounding box:</b> " + JSON.stringify(jsonData.boundingBox, null, 2) + " --> <a href=\"http://bboxfinder.com/#" + 
+                                    jsonData.boundingBox[1] + "," +
+                                    jsonData.boundingBox[0] + "," +
+                                    jsonData.boundingBox[3] + "," +
+                                    jsonData.boundingBox[2] +
+                                    "\">check</a>" + "<br>";
+
+              
+                const jsonDataDiv = document.getElementById('jsonData');
+
+                jsonDataDiv.innerHTML = '<pre>' + collections + startDate + endDate + boundingBox + '</pre>';
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        function callApi() {
+            // Récupérer la valeur du champ de texte
+            const inputValue = document.getElementById('apiInput').value;
+
+            // URL de l'API (remplacez par votre URL)
+            const apiUrl = `http://localhost:8080/searchparams?requestString=${encodeURIComponent(inputValue)}`;
+
+            // Appeler l'API
+            fetchData(apiUrl)
+        }
+
+        callApi()
+
+    </script>
+</body>
+</html>
