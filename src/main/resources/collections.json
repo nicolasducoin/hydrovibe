@@ -96,6 +96,7 @@
         {
             "id": "FLOODDAM_QUANTCUBE",
             "description": "Do not select"
+        },
         {
             "id": "FLOODDAM_CERFACS_WATER_DEPTH_VECTOR",
             "description": "Do not select"
