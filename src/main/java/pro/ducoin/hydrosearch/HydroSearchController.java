@@ -53,11 +53,13 @@ public class HydroSearchController {
 	@GetMapping("/searchparams")
 	public HydroSearchParameters hydroSearchParameters(
 			@Parameter(description = "Natural language query describing the hydrology product you're looking for (e.g., 'Lakes water level in July 2023 over France')", required = true)
-			@RequestParam(value = "requestString", required = true) String requestString) {
+			@RequestParam(value = "requestString", required = true) String requestString,
+			@Parameter(description = "Mistral AI model name (e.g., 'MISTRAL_LARGE_LATEST', 'MISTRAL_MEDIUM', 'MISTRAL_SMALL')", required = false)
+			@RequestParam(value = "model", required = false, defaultValue = "MISTRAL_LARGE_LATEST") String model) {
 		if (requestString == null || requestString.trim().isEmpty() || "None".equals(requestString)) {
 			throw new IllegalArgumentException("requestString parameter is required and cannot be empty");
 		}
-		return hydroSearchService.getParamsFromRequestSentence(requestString);
+		return hydroSearchService.getParamsFromRequestSentence(requestString, model);
 	}
 	
 	@ExceptionHandler(IllegalArgumentException.class)

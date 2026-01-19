@@ -48,17 +48,36 @@ public class HydroSearchService {
     }
 
     public HydroSearchParameters getParamsFromRequestSentence(String requestString) {
+        return getParamsFromRequestSentence(requestString, "MISTRAL_LARGE_LATEST");
+    }
+
+    public HydroSearchParameters getParamsFromRequestSentence(String requestString, String modelName) {
         if (requestString == null || requestString.trim().isEmpty()) {
             throw new IllegalArgumentException("requestString cannot be null or empty");
         }
 
+        MistralAiChatModelName mistralModel = parseModelName(modelName);
+        
         ChatModel model = MistralAiChatModel.builder()
                 .apiKey(mistralApiKey)
-                .modelName(MistralAiChatModelName.MISTRAL_LARGE_LATEST)
+                .modelName(mistralModel)
                 .build();
 
         String[] collectionsIds = getCollectionsIdsFromSentence(model, requestString);
         return getOtherInformationsAndCreateSearchParameters(model, collectionsIds, requestString);
+    }
+    
+    private MistralAiChatModelName parseModelName(String modelName) {
+        if (modelName == null || modelName.trim().isEmpty()) {
+            return MistralAiChatModelName.MISTRAL_LARGE_LATEST;
+        }
+        
+        try {
+            return MistralAiChatModelName.valueOf(modelName.toUpperCase().trim());
+        } catch (IllegalArgumentException e) {
+            // Default to LARGE_LATEST if model name is invalid
+            return MistralAiChatModelName.MISTRAL_LARGE_LATEST;
+        }
     }
 
     private HydroSearchParameters getOtherInformationsAndCreateSearchParameters(ChatModel model, String[] collectionsIds, String requestString) {
