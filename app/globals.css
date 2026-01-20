@@ -304,23 +304,23 @@ body {
     background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     margin-top: var(--spacing-md);
 }
 
 .resultsTitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--border-color);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .collectionsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
 }
 
 .collectionSummaryCard {
@@ -337,9 +337,8 @@ body {
 
 .collectionThumbnail {
     width: 100%;
-    height: 200px;
+    height: 140px;
     overflow: hidden;
-    margin: calc(var(--spacing-md) * -1) calc(var(--spacing-md) * -1) var(--spacing-md) calc(var(--spacing-md) * -1);
     background-color: var(--bg-tertiary);
     display: flex;
     align-items: center;
@@ -367,26 +366,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
-    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    gap: var(--spacing-xs);
 }
 
 .collectionSummaryTitle {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: 0;
     word-break: break-word;
     flex: 1;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 .collectionCount {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     background-color: var(--bg-tertiary);
-    padding: 4px 8px;
+    padding: 2px 6px;
     border-radius: 3px;
     white-space: nowrap;
     font-weight: 500;
@@ -395,17 +394,17 @@ body {
 .collectionSummaryContent {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
-    padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    gap: var(--spacing-xs);
+    padding: 0 var(--spacing-md) var(--spacing-sm) var(--spacing-md);
 }
 
 .collectionDescription {
-    font-size: 0.9375rem;
+    font-size: 0.8125rem;
     color: var(--text-secondary);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.5;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -414,17 +413,18 @@ body {
 .collectionMetadata {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
-    padding-top: var(--spacing-sm);
+    gap: 2px;
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
     border-top: 1px solid var(--border-light);
 }
 
 .metadataItem {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-xs);
+    gap: 4px;
 }
 
 .metadataItem strong {
