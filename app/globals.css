@@ -299,6 +299,107 @@ body {
     background-color: var(--bg-tertiary);
 }
 
+/* STAC Results - Matching Hydroweb Catalog Style */
+.stacResults {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.resultsTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.collectionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.collectionSummaryCard {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: var(--spacing-md);
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.collectionSummaryCard:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.collectionSummaryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+    gap: var(--spacing-sm);
+}
+
+.collectionSummaryTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    word-break: break-word;
+    flex: 1;
+}
+
+.collectionCount {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-tertiary);
+    padding: 4px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.collectionSummaryContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.collectionDescription {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.collectionMetadata {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--border-light);
+}
+
+.metadataItem {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.metadataItem strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .container {
@@ -329,6 +430,10 @@ body {
     }
     
     .resultGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .collectionsGrid {
         grid-template-columns: 1fr;
     }
 }
