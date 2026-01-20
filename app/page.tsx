@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, KeyboardEvent } from 'react';
+import { useState, KeyboardEvent, useEffect } from 'react';
 
 interface HydroSearchParameters {
   collections: string[];
@@ -38,6 +38,15 @@ interface CollectionGroup {
   features: StacFeature[];
 }
 
+interface CollectionMetadata {
+  id: string;
+  title: string;
+  description: string;
+  shortDescription: string;
+  thumbnail: string | null;
+  thumbnailUrl: string | null;
+}
+
 export default function Home() {
   const [query, setQuery] = useState('');
   const [model, setModel] = useState('MISTRAL_LARGE_LATEST');
@@ -47,6 +56,42 @@ export default function Home() {
   const [stacResults, setStacResults] = useState<CollectionGroup[]>([]);
   const [loadingStac, setLoadingStac] = useState(false);
   const [stacError, setStacError] = useState<string | null>(null);
+  const [collectionsMetadata, setCollectionsMetadata] = useState<Record<string, CollectionMetadata>>({});
+
+  // Load collections metadata on mount
+  useEffect(() => {
+    const loadCollectionsMetadata = async () => {
+      try {
+        console.log('Loading collections metadata from /api/collections...');
+        const response = await fetch('/api/collections', {
+          cache: 'no-store', // Force fresh data
+        });
+        
+        console.log('Response status:', response.status);
+        
+        if (response.ok) {
+          const metadata = await response.json();
+          
+          // Check if it's an error object
+          if (metadata.error) {
+            console.error('API returned error:', metadata);
+            return;
+          }
+          
+          setCollectionsMetadata(metadata);
+          console.log('✓ Loaded collections metadata:', Object.keys(metadata).length, 'collections');
+          console.log('Sample collection IDs:', Object.keys(metadata).slice(0, 5));
+        } else {
+          const errorText = await response.text();
+          console.error('✗ Could not load collections metadata:', response.status, errorText);
+        }
+      } catch (err) {
+        console.error('✗ Error loading collections metadata:', err);
+      }
+    };
+
+    loadCollectionsMetadata();
+  }, []);
 
   const handleSearch = async () => {
     if (!query.trim()) {
@@ -255,6 +300,8 @@ export default function Home() {
         })
       );
 
+      console.log('Collection groups found:', collectionGroups.map(g => g.collectionId));
+      
       setStacResults(collectionGroups);
       setStacError(null);
       
@@ -432,49 +479,77 @@ export default function Home() {
           <div className="stacResults">
             <h2 className="resultsTitle">Search Results</h2>
             <div className="collectionsGrid">
-              {stacResults.map((group) => (
-                <div key={group.collectionId} className="collectionSummaryCard">
-                  <div className="collectionSummaryHeader">
-                    <h3 className="collectionSummaryTitle">{group.collectionId}</h3>
-                    <span className="collectionCount">{group.features.length} items</span>
-                  </div>
-                  <div className="collectionSummaryContent">
-                    <p className="collectionDescription">
-                      {group.features.length > 0
-                        ? `Collection containing ${group.features.length} hydrology product${group.features.length > 1 ? 's' : ''}`
-                        : 'No items available'}
-                    </p>
-                        {group.features.length > 0 && (
-                          <div className="collectionMetadata">
-                            {group.features[0].properties?.datetime && (() => {
-                              const firstDate = group.features[0].properties.datetime;
-                              const lastFeature = group.features[group.features.length - 1];
-                              const lastDate = lastFeature?.properties?.datetime;
-                              
-                              return (
-                                <div className="metadataItem">
-                                  <strong>Date range:</strong>
-                                  <span>
-                                    {firstDate && new Date(firstDate).toLocaleDateString('en-US', {
+              {stacResults.map((group) => {
+                const metadata = collectionsMetadata[group.collectionId];
+                
+                // Debug logging
+                if (!metadata) {
+                  console.warn('No metadata found for collection:', group.collectionId);
+                  console.log('Available metadata keys:', Object.keys(collectionsMetadata));
+                }
+                
+                return (
+                  <div key={group.collectionId} className="collectionSummaryCard">
+                    {metadata?.thumbnail && (
+                      <div className="collectionThumbnail">
+                        <img 
+                          src={metadata.thumbnail} 
+                          alt={metadata.title || group.collectionId}
+                          onError={(e) => {
+                            console.error('Failed to load image:', metadata.thumbnail, 'for collection:', group.collectionId);
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
+                          onLoad={() => {
+                            console.log('Image loaded successfully:', metadata.thumbnail);
+                          }}
+                        />
+                      </div>
+                    )}
+                    <div className="collectionSummaryHeader">
+                      <h3 className="collectionSummaryTitle">
+                        {metadata?.title || group.collectionId}
+                      </h3>
+                      <span className="collectionCount">{group.features.length} items</span>
+                    </div>
+                    <div className="collectionSummaryContent">
+                      <p className="collectionDescription">
+                        {metadata?.shortDescription || metadata?.description || 
+                         (group.features.length > 0
+                          ? `Collection containing ${group.features.length} hydrology product${group.features.length > 1 ? 's' : ''}`
+                          : 'No items available')}
+                      </p>
+                      {group.features.length > 0 && (
+                        <div className="collectionMetadata">
+                          {group.features[0].properties?.datetime && (() => {
+                            const firstDate = group.features[0].properties.datetime;
+                            const lastFeature = group.features[group.features.length - 1];
+                            const lastDate = lastFeature?.properties?.datetime;
+                            
+                            return (
+                              <div className="metadataItem">
+                                <strong>Date range:</strong>
+                                <span>
+                                  {firstDate && new Date(firstDate).toLocaleDateString('en-US', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: 'numeric',
+                                  })}
+                                  {group.features.length > 1 && lastDate &&
+                                    ` - ${new Date(lastDate).toLocaleDateString('en-US', {
                                       year: 'numeric',
                                       month: 'short',
                                       day: 'numeric',
-                                    })}
-                                    {group.features.length > 1 && lastDate &&
-                                      ` - ${new Date(lastDate).toLocaleDateString('en-US', {
-                                        year: 'numeric',
-                                        month: 'short',
-                                        day: 'numeric',
-                                      })}`}
-                                  </span>
-                                </div>
-                              );
-                            })()}
-                          </div>
-                        )}
+                                    })}`}
+                                </span>
+                              </div>
+                            );
+                          })()}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}

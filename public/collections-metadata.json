@@ -1,0 +1,234 @@
+{
+  "HYDROWEB_LAKES_RESEARCH": {
+    "id": "HYDROWEB_LAKES_RESEARCH",
+    "title": "Theia Hydroweb Research Altimetry Lake Water Level and Storage",
+    "description": "The collection provides water level, extent, and volume observations for large research lakes, observed by altimetry.",
+    "shortDescription": "The collection provides water level, extent, and volume observations for large research lakes, observed by altimetry.",
+    "thumbnail": "/collections/HYDROWEB_LAKES_RESEARCH.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/HYDROWEB_LAKES_RESEARCH.webp"
+  },
+  "GRAVIMETRY_TOTAL_WATER": {
+    "id": "GRAVIMETRY_TOTAL_WATER",
+    "title": "SAGSA Gravimetry Total Water Storage",
+    "description": "The collection provides total land water storage, integrating all water from soil moisture to deep aquifers.",
+    "shortDescription": "The collection provides total land water storage, integrating all water from soil moisture to deep aquifers.",
+    "thumbnail": "/collections/GRAVIMETRY_TOTAL_WATER.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/GRAVIMETRY_TOTAL_WATER.webp"
+  },
+  "SWOT_L2_HR_RASTER_100M": {
+    "id": "SWOT_L2_HR_RASTER_100M",
+    "title": "SWOT Level-2 HR Raster - 100m",
+    "description": "The collection provides water surface elevation and inundation extent data on a 100-meter resolution grid.",
+    "shortDescription": "The collection provides water surface elevation and inundation extent data on a 100-meter resolution grid.",
+    "thumbnail": "/collections/SWOT_L2_HR_RASTER_100M.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_RASTER_100m.webp"
+  },
+  "LIS_SNT_YEARLY": {
+    "id": "LIS_SNT_YEARLY",
+    "title": "Theia Sentinel-2 Snow Cover Yearly Synthesis - Level-3B",
+    "description": "The collection provides yearly syntheses of snow cover phenology with a 20m spatial resolution.",
+    "shortDescription": "The collection provides yearly syntheses of snow cover phenology with a 20m spatial resolution.",
+    "thumbnail": "/collections/LIS_SNT_YEARLY.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/HYMOTEP_LIS_FSC_PREOP_YEARLY.webp"
+  },
+  "S3_LPP_LAKE_WATER_LEVEL": {
+    "id": "S3_LPP_LAKE_WATER_LEVEL",
+    "title": "Sentinel-3 Lake Water Level Demonstration Product",
+    "description": "The collection provides water level observations over lakes and reservoirs.",
+    "shortDescription": "The collection provides water level observations over lakes and reservoirs.",
+    "thumbnail": "/collections/S3_LPP_LAKE_WATER_LEVEL.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/S3_LPP_LAKE_WATER_LEVEL.webp"
+  },
+  "HYDROWEB_RIVERS_RESEARCH": {
+    "id": "HYDROWEB_RIVERS_RESEARCH",
+    "title": "Theia Hydroweb Research Altimetry River Water Level",
+    "description": "The collection provides water level observations over research rivers, observed by altimetry.",
+    "shortDescription": "The collection provides water level observations over research rivers, observed by altimetry.",
+    "thumbnail": "/collections/HYDROWEB_RIVERS_RESEARCH.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/HYDROWEB_RIVERS_RESEARCH.webp"
+  },
+  "SWOT_L2_HR_LAKESP_UNASSIGNED": {
+    "id": "SWOT_L2_HR_LAKESP_UNASSIGNED",
+    "title": "SWOT Level-2 HR Lake Single Pass - Unassigned",
+    "description": "The collection provides measured lake data for newly observed lakes, not included in the Prior Lake Database.",
+    "shortDescription": "The collection provides measured lake data for newly observed lakes, not included in the Prior Lake Database.",
+    "thumbnail": "/collections/SWOT_L2_HR_LAKESP_UNASSIGNED.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_LAKESP_Unassigned.webp"
+  },
+  "HUBEAU_HYDROMETRIE": {
+    "id": "HUBEAU_HYDROMETRIE",
+    "title": "PHyC Daily Average River Discharge",
+    "description": "The collection provides daily average river discharge calculated from in-situ measurements.",
+    "shortDescription": "The collection provides daily average river discharge calculated from in-situ measurements.",
+    "thumbnail": "/collections/HUBEAU_HYDROMETRIE.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/HUBEAU_HYDROMETRIE.webp"
+  },
+  "HYDROWEB_RIVERS_OPE": {
+    "id": "HYDROWEB_RIVERS_OPE",
+    "title": "Theia Hydroweb Operational Altimetry River Water Level",
+    "description": "The collection provides water level observations over operational rivers, observed by altimetry.",
+    "shortDescription": "The collection provides water level observations over operational rivers, observed by altimetry.",
+    "thumbnail": "/collections/HYDROWEB_RIVERS_OPE.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/HYDROWEB_RIVERS_OPE.webp"
+  },
+  "GRS_L2A_S2": {
+    "id": "GRS_L2A_S2",
+    "title": "Theia Sentinel-2 Water Quality - Level-2A",
+    "description": "The collection offers raw reflectance measurements used to compute corresponding L2b water quality products.",
+    "shortDescription": "The collection offers raw reflectance measurements used to compute corresponding L2b water quality products.",
+    "thumbnail": "/collections/GRS_L2A_S2.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/GRS.webp"
+  },
+  "HYDROWEB_LAKES_OPE": {
+    "id": "HYDROWEB_LAKES_OPE",
+    "title": "Theia Hydroweb Operational Altimetry Lake Water Level and Storage",
+    "description": "The collection provides water level, extent, and volume observations for large operational lakes, observed by altimetry.",
+    "shortDescription": "The collection provides water level, extent, and volume observations for large operational lakes, observed by altimetry.",
+    "thumbnail": "/collections/HYDROWEB_LAKES_OPE.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/HYDROWEB_LAKES_OPE.webp"
+  },
+  "SWOT_L2_HR_RASTER_250M": {
+    "id": "SWOT_L2_HR_RASTER_250M",
+    "title": "SWOT Level-2 HR Raster - 250m",
+    "description": "The collection provides water surface elevation and inundation extent data on a 250-meter resolution grid.",
+    "shortDescription": "The collection provides water surface elevation and inundation extent data on a 250-meter resolution grid.",
+    "thumbnail": "/collections/SWOT_L2_HR_RASTER_250M.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_RASTER_250m.webp"
+  },
+  "SWOT_PRIOR_LAKE_DATABASE": {
+    "id": "SWOT_PRIOR_LAKE_DATABASE",
+    "title": "SWOT Prior Lake Database",
+    "description": "The collection provides a global inventory of lakes and reservoirs, organized by continents and basins.",
+    "shortDescription": "The collection provides a global inventory of lakes and reservoirs, organized by continents and basins.",
+    "thumbnail": "/collections/SWOT_PRIOR_LAKE_DATABASE.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_PLD.webp"
+  },
+  "C3S_CDS_TOTAL_PRECIPITATION_ERA5_HOURLY": {
+    "id": "C3S_CDS_TOTAL_PRECIPITATION_ERA5_HOURLY",
+    "title": "Copernicus CCS ERA5 Hourly Total Precipitation Reanalysis",
+    "description": "The collection offers the hourly global-scale total precipitation reanalysis from ERA5 (for ECMWF ReAnalysis v5) from 1940 to present.",
+    "shortDescription": "The collection offers the hourly global-scale total precipitation reanalysis from ERA5 (for ECMWF ReAnalysis v5) from 1940 to present.",
+    "thumbnail": "/collections/C3S_CDS_TOTAL_PRECIPITATION_ERA5_HOURLY.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/C3S_CDS_TOTAL_PRECIPITATION_ERA5_HOURLY.webp"
+  },
+  "SWOT_L2_HR_RIVERAVG": {
+    "id": "SWOT_L2_HR_RIVERAVG",
+    "title": "SWOT Level-2 HR River Average",
+    "description": "The collection provides aggregated river data — minimum, median, and maximum values — per satellite cycle.",
+    "shortDescription": "The collection provides aggregated river data — minimum, median, and maximum values — per satellite cycle.",
+    "thumbnail": "/collections/SWOT_L2_HR_RIVERAVG.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_RiverAvg.webp"
+  },
+  "COASTAL_BATHYMETRY": {
+    "id": "COASTAL_BATHYMETRY",
+    "title": "Global Coastal Bathymetry from Sentinel-2 and GEBCO",
+    "description": "The collection offers coastal bathymetry, blending GEBCO elevation map with the S2Shores depth product nearshore.",
+    "shortDescription": "The collection offers coastal bathymetry, blending GEBCO elevation map with the S2Shores depth product nearshore.",
+    "thumbnail": "/collections/COASTAL_BATHYMETRY.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/COASTAL_BATHYMETRY.webp"
+  },
+  "SWOT_L2_HR_LAKESP_PRIOR": {
+    "id": "SWOT_L2_HR_LAKESP_PRIOR",
+    "title": "SWOT Level-2 HR Lake Single Pass - Prior",
+    "description": "The collection provides measured lake data for lakes in the SWOT Prior Lake Database, organized by lake.",
+    "shortDescription": "The collection provides measured lake data for lakes in the SWOT Prior Lake Database, organized by lake.",
+    "thumbnail": "/collections/SWOT_L2_HR_LAKESP_PRIOR.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_LAKESP_Prior.webp"
+  },
+  "SWOT_PRIOR_RIVER_DATABASE": {
+    "id": "SWOT_PRIOR_RIVER_DATABASE",
+    "title": "SWOT Prior River Database - SWORD",
+    "description": "The collection provides river nodes and reaches for rivers wider than 30m, organized by continents and basins.",
+    "shortDescription": "The collection provides river nodes and reaches for rivers wider than 30m, organized by continents and basins.",
+    "thumbnail": "/collections/SWOT_PRIOR_RIVER_DATABASE.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_PRD.webp"
+  },
+  "SWOT_L2_HR_PIXC": {
+    "id": "SWOT_L2_HR_PIXC",
+    "title": "SWOT Level-2 HR Pixel Cloud",
+    "description": "The collection provides a point cloud of water mask pixels at a 20-meter resolution.",
+    "shortDescription": "The collection provides a point cloud of water mask pixels at a 20-meter resolution.",
+    "thumbnail": "/collections/SWOT_L2_HR_PIXC.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_PIXC.webp"
+  },
+  "SW_L2_S2_SINGLE": {
+    "id": "SW_L2_S2_SINGLE",
+    "title": "Theia Sentinel-2 Surface Water - Level-2B",
+    "description": "The collection provides rasterized water detection data from the Sentinel-2 MultiSpectral Instrument.",
+    "shortDescription": "The collection provides rasterized water detection data from the Sentinel-2 MultiSpectral Instrument.",
+    "thumbnail": "/collections/SW_L2_S2_SINGLE.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SW_L2_S2_SINGLE.webp"
+  },
+  "LIS_FSC_PREOP": {
+    "id": "LIS_FSC_PREOP",
+    "title": "Theia Sentinel-2 Snow Cover- Level-2B",
+    "description": "The collection provides high-resolution snow cover data with a 5-day revisit and 20m spatial resolution.",
+    "shortDescription": "The collection provides high-resolution snow cover data with a 5-day revisit and 20m spatial resolution.",
+    "thumbnail": "/collections/LIS_FSC_PREOP.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/HYMOTEP_LIS_FSC_PREOP.webp"
+  },
+  "SWOT_L2_HR_RIVERSP_REACH": {
+    "id": "SWOT_L2_HR_RIVERSP_REACH",
+    "title": "SWOT Level-2 HR River Single Pass - Reach",
+    "description": "The collection provides measured river data, resampled onto 10km reaches.",
+    "shortDescription": "The collection provides measured river data, resampled onto 10km reaches.",
+    "thumbnail": "/collections/SWOT_L2_HR_RIVERSP_REACH.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_RiverSP_Reach.webp"
+  },
+  "SW_L3_S2_MONTHLY": {
+    "id": "SW_L3_S2_MONTHLY",
+    "title": "Theia Sentinel-2 Surface Water Monthly Synthesis- Level-3B",
+    "description": "The collection provides monthly syntheses of rasterized water detection data from the Sentinel-2 MultiSpectral Instrument.",
+    "shortDescription": "The collection provides monthly syntheses of rasterized water detection data from the Sentinel-2 MultiSpectral Instrument.",
+    "thumbnail": "/collections/SW_L3_S2_MONTHLY.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SW_L3_S2_MONTHLY.webp"
+  },
+  "SWOT_L2_HR_LAKEAVG": {
+    "id": "SWOT_L2_HR_LAKEAVG",
+    "title": "SWOT Level-2 HR Lake Average",
+    "description": "The collection provides aggregated lake data — minimum, median, and maximum values — per satellite cycle.",
+    "shortDescription": "The collection provides aggregated lake data — minimum, median, and maximum values — per satellite cycle.",
+    "thumbnail": "/collections/SWOT_L2_HR_LAKEAVG.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_LAKEAVG.webp"
+  },
+  "FLOODDAM_CERFACS_FLOOD_EXTENT": {
+    "id": "FLOODDAM_CERFACS_FLOOD_EXTENT",
+    "title": "FloodDAM-DT Flood Extent",
+    "description": "The collection provides flood extent simulation, computed with the TELEMAC-2D hydrodynamic model.",
+    "shortDescription": "The collection provides flood extent simulation, computed with the TELEMAC-2D hydrodynamic model.",
+    "thumbnail": "/collections/FLOODDAM_CERFACS_FLOOD_EXTENT.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/FLOODDAM_DT_CERFACS_FLOOD_EXTENT.webp"
+  },
+  "SW_L3_S2_YEARLY": {
+    "id": "SW_L3_S2_YEARLY",
+    "title": "Theia Sentinel-2 Surface Water Yearly Synthesis- Level-3B",
+    "description": "The collection provides yearly syntheses of rasterized water detection data from the Sentinel-2 MultiSpectral Instrument.",
+    "shortDescription": "The collection provides yearly syntheses of rasterized water detection data from the Sentinel-2 MultiSpectral Instrument.",
+    "thumbnail": "/collections/SW_L3_S2_YEARLY.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SW_L3_S2_YEARLY.webp"
+  },
+  "SWOT_L2_HR_LAKESP_OBS": {
+    "id": "SWOT_L2_HR_LAKESP_OBS",
+    "title": "SWOT Level-2 HR Lake Single Pass - Observed",
+    "description": "The collection provides measured lake data for lakes in the SWOT Prior Lake Database, organized by observation.",
+    "shortDescription": "The collection provides measured lake data for lakes in the SWOT Prior Lake Database, organized by observation.",
+    "thumbnail": "/collections/SWOT_L2_HR_LAKESP_OBS.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_LAKESP_Obs.webp"
+  },
+  "SWOT_L2_HR_PIXCVEC": {
+    "id": "SWOT_L2_HR_PIXCVEC",
+    "title": "SWOT Level-2 HR Pixel Cloud Vector",
+    "description": "The collection provides a point cloud of water mask pixels linked to SWOT Prior River and Lake Databases bodies.",
+    "shortDescription": "The collection provides a point cloud of water mask pixels linked to SWOT Prior River and Lake Databases bodies.",
+    "thumbnail": "/collections/SWOT_L2_HR_PIXCVEC.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_PIXCVec.webp"
+  },
+  "SWOT_L2_HR_RIVERSP_NODE": {
+    "id": "SWOT_L2_HR_RIVERSP_NODE",
+    "title": "SWOT Level-2 HR River Single Pass - Node",
+    "description": "The collection offers detailed river data, resampled onto 200m-spaced nodes.",
+    "shortDescription": "The collection offers detailed river data, resampled onto 200m-spaced nodes.",
+    "thumbnail": "/collections/SWOT_L2_HR_RIVERSP_NODE.webp",
+    "thumbnailUrl": "https://hydroweb-pp.next.theia-land.fr//docs/collections/SWOT_L2_HR_RiverSP_Node.webp"
+  }
+}
